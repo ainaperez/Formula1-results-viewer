@@ -1,5 +1,6 @@
 {
 	"name": "pec0",
+	"homepage": "http://ainaperez.github.io/formula1-results-viewer",
 	"version": "0.0.0",
 	"private": true,
 	"dependencies": {
@@ -9,9 +10,12 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"test": "react-scripts test",
+		"build": "react-scripts build",
 		"test:e2e:watch": "cypress open",
 		"cy:run": "cypress run",
-		"test:e2e": "start-server-and-test start http://localhost:3000 cy:run"
+		"test:e2e": "start-server-and-test start http://localhost:3000 cy:run",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"@testing-library/dom": "^7.30.4",
@@ -21,6 +25,7 @@
 		"cypress": "^7.2.0",
 		"eslint-config-prettier": "^7.2.0",
 		"eslint-plugin-cypress": "^2.11.2",
+		"gh-pages": "^3.2.3",
 		"msw": "^0.27.1",
 		"prettier": "^2.2.1",
 		"react-scripts": "4.0.2",
