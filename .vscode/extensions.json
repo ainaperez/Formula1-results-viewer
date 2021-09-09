@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens",
+		"EditorConfig.EditorConfig",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-rename-tag",
+		"Gruntfuggly.todo-tree",
+		"johnpapa.vscode-peacock",
+		"mrmlnc.vscode-scss",
+		"ms-azuretools.vscode-docker",
+		"Orta.vscode-jest",
+		"silvenon.mdx",
+		"stylelint.vscode-stylelint"
+	]
+}

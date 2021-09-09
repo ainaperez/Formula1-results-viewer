@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Programación javascript para programadores " />
+		<title>PJP - 2021</title>
+	</head>
+	<body>
+		<header>
+			Carreras de F1
+			<form id="search-form">
+				<select id="year-select">
+					<option value=""> Año </option>
+					<option value="2020"> 2020 </option>
+					<option value="2019"> 2019 </option>
+					<option value="2018"> 2018 </option>
+					<option value="2017"> 2017 </option>
+					<option value="2016"> 2016 </option>
+					<option value="2015"> 2015 </option>
+					<option value="2014"> 2014 </option>
+				</select>
+
+				<select id="stage-select">
+					<option value=""> Etapa </option>
+					<option value="1"> 1 </option>
+					<option value="2"> 2 </option>
+					<option value="3"> 3 </option>
+					<option value="4"> 4 </option>
+					<option value="5"> 5 </option>
+					<option value="6"> 6 </option>
+					<option value="7"> 7 </option>
+					<option value="8"> 8 </option>
+					<option value="9"> 9 </option>
+					<option value="10"> 10 </option>
+				</select>
+
+				<button type="submit"> Buscar </button>
+			</form>
+		</header>
+		<main>
+			<table id="results"> </table>
+		</main>
+		<aside id="modal-wrapper" class="ModalWrapper">
+			<div id="modal" class="Modal">Sumacher</div>
+		</aside>
+	</body>
+</html>

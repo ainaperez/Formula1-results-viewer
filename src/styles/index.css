@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'uoc-sans';
+	font-weight: 400;
+	src: url(/src/fonts/UOCSans-Regular.otf);
+}
+@font-face {
+	font-family: 'uoc-sans';
+	font-weight: 600;
+	src: url(/src/fonts/UOCSans-Bold.otf);
+}
+
+:root {
+	--uoc-color-primary: #000078;
+}
+
+body {
+	margin: 0;
+	font-family: 'uoc-sans';
+}
+
+header {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	background: var(--uoc-color-primary);
+	color: white;
+	font-size: 1.6rem;
+	justify-content: space-between;
+}
+
+form {
+	align-items: center;
+	display: flex;
+}
+
+form select,
+form button {
+	min-width: 100px;
+	padding: 0.3rem 0.6rem;
+	margin-left: 1rem;
+}
+
+table {
+	margin: 2rem auto;
+}
+
+td {
+	padding: 0.3rem 1rem;
+}
+
+tr {
+	cursor: pointer;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.ModalWrapper {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.ModalWrapper[data-isVisible] {
+	display: grid;
+}
+
+.Modal {
+	background: white;
+	align-self: center;
+	justify-self: center;
+	padding: 3rem;
+	text-align: center;
+	border-radius: 0.2rem;
+}
