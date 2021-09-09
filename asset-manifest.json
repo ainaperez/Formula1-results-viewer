@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/formula1-results-viewer/static/css/main.61c8d960.chunk.css",
+    "main.css": "/formula1-results-viewer/static/css/main.988eed11.chunk.css",
     "main.js": "/formula1-results-viewer/static/js/main.59db3660.chunk.js",
     "main.js.map": "/formula1-results-viewer/static/js/main.59db3660.chunk.js.map",
     "runtime-main.js": "/formula1-results-viewer/static/js/runtime-main.da617531.js",
     "runtime-main.js.map": "/formula1-results-viewer/static/js/runtime-main.da617531.js.map",
     "index.html": "/formula1-results-viewer/index.html",
-    "static/css/main.61c8d960.chunk.css.map": "/formula1-results-viewer/static/css/main.61c8d960.chunk.css.map",
-    "static/media/index.css": "/formula1-results-viewer/static/media/UOCSans-Regular.39996c25.otf"
+    "static/css/main.988eed11.chunk.css.map": "/formula1-results-viewer/static/css/main.988eed11.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.da617531.js",
-    "static/css/main.61c8d960.chunk.css",
+    "static/css/main.988eed11.chunk.css",
     "static/js/main.59db3660.chunk.js"
   ]
 }
