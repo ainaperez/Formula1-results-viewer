@@ -1,13 +1,13 @@
-@font-face {
-	font-family: 'uoc-sans';
+/*@font-face {
+	font-family: 'Arial';
 	font-weight: 400;
-	src: url(/src/fonts/UOCSans-Regular.otf);
+	
 }
 @font-face {
-	font-family: 'uoc-sans';
+	font-family: 'Arial';
 	font-weight: 600;
-	src: url(/src/fonts/UOCSans-Bold.otf);
-}
+	
+}*/
 
 :root {
 	--uoc-color-primary: #000078;
@@ -15,7 +15,7 @@
 
 body {
 	margin: 0;
-	font-family: 'uoc-sans';
+	font-family: 'Arial';
 }
 
 header {
