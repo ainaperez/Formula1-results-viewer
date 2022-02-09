@@ -28,28 +28,31 @@ export function setModalOnClickListener() {
  */
 export function clearResults() {
 	$results.innerHTML = '';
-	const loader = setLoading();
-	document.body.appendChild(loader);
 	const $thead = _createTheadElement();
 	$results.appendChild($thead);
+	const loader = setLoading();
+	$results.appendChild(loader);
 }
 
 /**
- * TODO: Display loading text
+ * Display loading text
  */
 export function setLoading() {
-	var newDiv = document.createElement("div");
+	var newDiv = document.createElement('div');
 	newDiv.id = 'loading';
 	newDiv.style.display = 'block';
 	newDiv.innerHTML= "<p>Loading...<p>";
-	return newDiv;
-
-	
-		
+	return newDiv;		
 }
 
+export function removeLoading() {
+	const $loader = document.querySelector('#loading');
+	$loader.style.display = 'none';
+}
+
+
 /**
- * Sets an error whe happes
+ * Sets an error when it happens
  * @param {*} err
  */
 export function setError(err) {
@@ -70,24 +73,18 @@ export function addResult(result) {
 }
 
 /**
- * TODO: Creates a new table row with the click listener attached
+ * Creates a new table row with the click listener attached
  * @param {Result} result
  */
 function _createResult(result) {
 	const tr = document.createElement('tr');
-		
-			for (var prop in result) {
-				if (result.hasOwnProperty.call(result, prop)) {
-					var cell = tr.insertCell();
-					cell.innerHTML = result[prop];
-					
-
-		}
+		for (var prop in result) {
+			if (result.hasOwnProperty.call(result, prop)) {
+				var cell = tr.insertCell();
+				cell.innerHTML = result[prop];
+			}
 	}
-
-	// TODO Complete code here
-	
-	if($modalWrapper.getAttribute('data-isVisible')=='true'){
+	if($modalWrapper.getAttribute('data-isVisible')==='true'){
 		window.onclick = _hideModal($modalWrapper);
 	}else{
 		tr.addEventListener('click', _showModal);
@@ -95,12 +92,8 @@ function _createResult(result) {
 	return tr;
 }
 
-
-
-
 function _createTheadElement() {
 	const thead = document.createElement('thead');
-
 	thead.innerHTML = `
 		<tr>
 			<th>Position</th>
@@ -110,7 +103,6 @@ function _createTheadElement() {
 			<th>Points</th>
 		</tr>
 	`;
-
 	return thead;
 }
 
@@ -119,29 +111,25 @@ function _createTheadElement() {
  */
 function _showModal(e) {
 	const tr = e.target.closest("tr");
-	console.log(tr);
 	const text = tr.cells[1].textContent;
 	$modal.innerHTML = text;
 	$modalWrapper.setAttribute('data-isVisible', true);
 	$modalWrapper.style.display = "grid";
-	
 }
 
 /**
- * TODO: Hides the modal.
+ * Hides the modal.
  *
  * - Should only hide the modal when the user clicks on the modal Wrapper (not the modal itself!)
  */
 function _hideModal(e) {
-	
 	if (e.target !== $modal) {
 		$modalWrapper.setAttribute('data-isVisible', false);
-		if ($modalWrapper.getAttribute('data-isVisible')=='false'){
+		if ($modalWrapper.getAttribute('data-isVisible') === 'false'){
 			$modalWrapper.style.display = "none";
-		}
-		
+		}		
+	}
 }
-	  }
 	
 	
 		

@@ -1,5 +1,5 @@
 import { clearResults, setFormListener, setModalOnClickListener } from './view';
-import { setLoading, setError, addResult} from './view';
+import { removeLoading, setError, addResult} from './view';
 import { getSelectedYear, getSelectedStage } from './view';
 import {list } from './model'
 
@@ -12,23 +12,18 @@ export function init() {
 }
 
 /**
- * TODO: Set the callback that must be executed when the form is submited.
+ * Set the callback that must be executed when the form is submited.
  * - should display loading when loading
  * - should display the error when the request fails
  * - should display the table when the request succeds
  */
 async function handleSubmit(event) {
 	event.preventDefault();
-
 		clearResults();
-		
-
 		let a = list(getSelectedYear(), getSelectedStage())
+		a.then(removeLoading);
 		a.then(addResult);
-		a.catch(setError);	
-		
-		
-	
+		a.catch(setError);		
 }	
 
 
